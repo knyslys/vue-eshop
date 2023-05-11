@@ -1,12 +1,13 @@
 <template>
   <section class="section-about">
+    <!-- grid place-items-center md:grid-cols-2 gap-y-10 -->
     <div
-      class="container max-w-screen-xl mx-auto mt-14 p-4 grid place-items-center md:grid-cols-2 gap-y-10"
+      class="container max-w-screen-xl mx-auto mt-14 p-4 text-center grid grid-cols-1 place-items-center gap-y-10 md:grid-cols-2 md:text-left"
     >
-      <div class="imgarea">
+      <div class="imgarea row-start-2 md:row-auto">
         <img src="/images/macbook.png" alt="macbook" />
       </div>
-      <div class="textarea">
+      <div class="textarea row-start-1 md:row-auto">
         <h1 class="text-4xl text-violet-600 uppercase font-bold">
           Fast delivery
         </h1>
@@ -34,7 +35,7 @@
       <div class="imgarea">
         <img src="/images/cloud-data.png" alt="macbook" />
       </div>
-      <div class="textarea">
+      <div class="textarea row-start-5 md:row-auto">
         <h1 class="text-4xl text-violet-600 uppercase font-bold">
           Preinstalled programs
         </h1>

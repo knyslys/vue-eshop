@@ -4,13 +4,13 @@
       class="container test mx-auto bg-violet-50 border-solid border-2 rounded-lg shadow-lg"
     >
       <div
-        class="arrow arrow--left bg-violet-800 rounded-md"
+        class="arrow arrow--left top-[5%] md:top[10%] lg:top-[30%] lg:translate-y-2/4 bg-violet-800 rounded-md"
         @click="changeHeader(-1)"
       >
         <Icon icon="material-symbols:chevron-left" class="icon" />
       </div>
       <div
-        class="arrow arrow--right bg-violet-800 rounded-md"
+        class="arrow arrow--right top-[5%] md:top[10%] lg:top-[30%] lg:translate-y-2/4 bg-violet-800 rounded-md"
         @click="changeHeader(1)"
       >
         <Icon icon="material-symbols:chevron-right" class="icon" />
@@ -177,7 +177,7 @@ img {
 }
 .arrow {
   position: absolute;
-  top: 50%;
+
   cursor: pointer;
   display: flex;
   justify-content: center;

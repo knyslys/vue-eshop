@@ -5,7 +5,7 @@
         Only the best manifacturers
       </h1>
       <div
-        class="flex md:justify-between mt-10 sm:flex-col md:flex-row flex-wrap"
+        class="flex flex-col place-items-center md:flex-row md:justify-between mt-8"
       >
         <img
           class="partner md:max-w-[10%]"
@@ -77,6 +77,8 @@
   /* width: clamp(5rem, 2.5vw, 10rem); */
   /* max-height: 4.5rem; */
   filter: grayscale(1);
+  aspect-ratio: 16/6;
+  width: clamp(5rem, 50%, 10rem);
   /* opacity:; */
 }
 .pc-circle {
