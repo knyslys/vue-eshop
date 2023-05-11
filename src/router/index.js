@@ -11,9 +11,18 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: "/catalog",
+      path: "/catalog/",
       name: "catalog",
       component: CatalogView,
+
+      children: [
+        {
+          path: "/catalog/view/:id",
+          name: "catalogview",
+          props: true,
+          component: CatalogView,
+        },
+      ],
     },
   ],
 });

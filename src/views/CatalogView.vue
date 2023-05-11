@@ -1,7 +1,7 @@
 <template>
   <section class="section-catalog">
-    <div class="container mx-auto grid grid-cols-1">
-      <div class="categories pt-2 pb-2 bg-violet-200">
+    <div class="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-x-2">
+      <div class="categories pt-2 pb-2">
         <ul>
           <li
             class="bg-violet-100 text-center border-transparent border-b-2 border-t-2 cursor-pointer"
@@ -19,21 +19,36 @@
           </li>
         </ul>
       </div>
-      <div class="items bg-violet-400 grid gap-y-10 grid-cols-1">
+      <div
+        class="items grid gap-y-10 grid-cols-1 lg:grid-cols-2 lg:col-span-2 gap-x-10"
+      >
         <item
           v-for="pc in items[selectedCategory]"
+          :id="pc.id"
           :img="pc.image"
           :name="pc.name"
+          :price="pc.price"
+          :cpu="pc.cpu"
+          :gpu="pc.gpu"
         ></item>
       </div>
     </div>
+
+    <item-view
+      :id="rtr.params.id"
+      :category="selectedCategory"
+      v-if="rtr.params.id !== undefined"
+    ></item-view>
   </section>
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
+import { ref, computed, onMounted } from "vue";
 import Item from "../components/Item.vue";
+import { useRoute } from "vue-router";
+import ItemView from "../components/ItemView.vue";
 const selectedCategory = ref("computers");
+const rtr = useRoute();
 
 const items = {
   computers: [
@@ -42,6 +57,7 @@ const items = {
       name: "Galaxy Chad Super",
       image: "/images/pc1.webp",
       cpu: "AMD Ryzen 4-5000",
+      gpu: "NVIDIA RTX 3060TI",
       ram: "16",
       motherboard: "MSI",
       price: "799.00",
@@ -53,6 +69,7 @@ const items = {
       name: "Galaxy Chad Super",
       image: "/images/pc1.webp",
       cpu: "AMD Ryzen 4-5000",
+      gpu: "NVIDIA RTX 3060TI",
       ram: "16",
       motherboard: "MSI",
       price: "799.00",
@@ -64,6 +81,7 @@ const items = {
       name: "Galaxy Chad Super",
       image: "/images/pc1.webp",
       cpu: "AMD Ryzen 4-5000",
+      gpu: "NVIDIA RTX 3060TI",
       ram: "16",
       motherboard: "MSI",
       price: "799.00",
@@ -75,6 +93,7 @@ const items = {
       name: "Galaxy Chad Super",
       image: "/images/pc1.webp",
       cpu: "AMD Ryzen 4-5000",
+      gpu: "NVIDIA RTX 3060TI",
       ram: "16",
       motherboard: "MSI",
       price: "799.00",
@@ -86,6 +105,7 @@ const items = {
       name: "Galaxy Chad Super",
       image: "/images/pc1.webp",
       cpu: "AMD Ryzen 4-5000",
+      gpu: "NVIDIA RTX 3060TI",
       ram: "16",
       motherboard: "MSI",
       price: "799.00",
@@ -97,6 +117,7 @@ const items = {
       name: "Galaxy Chad Super",
       image: "/images/pc1.webp",
       cpu: "AMD Ryzen 4-5000",
+      gpu: "NVIDIA RTX 3060TI",
       ram: "16",
       motherboard: "MSI",
       price: "799.00",
@@ -108,6 +129,7 @@ const items = {
       name: "Galaxy Chad Super",
       image: "/images/pc1.webp",
       cpu: "AMD Ryzen 4-5000",
+      gpu: "NVIDIA RTX 3060TI",
       ram: "16",
       motherboard: "MSI",
       price: "799.00",
@@ -119,6 +141,7 @@ const items = {
       name: "Galaxy Chad Super",
       image: "/images/pc1.webp",
       cpu: "AMD Ryzen 4-5000",
+      gpu: "NVIDIA RTX 3060TI",
       ram: "16",
       motherboard: "MSI",
       price: "799.00",
@@ -130,6 +153,7 @@ const items = {
       name: "Galaxy Chad Super",
       image: "/images/pc1.webp",
       cpu: "AMD Ryzen 4-5000",
+      gpu: "NVIDIA RTX 3060TI",
       ram: "16",
       motherboard: "MSI",
       price: "799.00",
