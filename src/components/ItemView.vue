@@ -47,6 +47,20 @@
               </span></span
             >
           </div>
+          <p class="text-red-500 text-center" v-if="error !== ''">
+            {{ error }}
+          </p>
+          <input
+            type="number"
+            v-model="itemQuantity"
+            class="text-center rounded-md"
+          />
+          <button
+            class="hover:-translate-y-1 hover:shadow-md uppercase catalog bg-violet-950 text-white p-4 rounded-md duration-200 hover:p-5"
+            @click="submitToCart"
+          >
+            add
+          </button>
         </div>
       </div>
     </div>
@@ -56,10 +70,14 @@
 <script setup>
 import { onMounted, ref } from "vue";
 import { useItemStore } from "../stores/items.js";
+import { useCart } from "../stores/cart.js";
 import { useRouter } from "vue-router";
 const items = useItemStore();
+const cart = useCart();
 const router = useRouter();
 const selectedItem = ref({});
+const itemQuantity = ref(1);
+const error = ref("");
 onMounted(() => {
   const foundedItem = items.itemExist(prop.category, prop.id);
   if (!foundedItem) {
@@ -76,6 +94,19 @@ const prop = defineProps({
     type: String,
   },
 });
+
+const submitToCart = () => {
+  if (itemQuantity.value <= 0) {
+    error.value = "Please enter a valid quantity!";
+    return;
+  }
+  cart.addToCart(
+    selectedItem.value.id,
+    selectedItem.value.category,
+    itemQuantity.value
+  );
+  error.value = "";
+};
 </script>
 
 <style scoped>

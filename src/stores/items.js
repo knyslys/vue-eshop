@@ -15,7 +15,7 @@ export const useItemStore = defineStore("items", () => {
         price: "799.00",
         description:
           "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus eveniet minus corporis culpa explicabo laborum rem officia incidunt tempore, accusamus quo minima, enim dolorum, suscipit velit facilis perspiciatis est possimus harum vero aspernatur repellat consectetur! Quisquam alias eum excepturi tenetur!",
-        category: "Computers",
+        category: "computers",
       },
       {
         id: "12",
@@ -27,7 +27,7 @@ export const useItemStore = defineStore("items", () => {
         motherboard: "MSI",
         price: "799.00",
         desciption: "",
-        category: "Computers",
+        category: "computers",
       },
       {
         id: "22",
@@ -39,7 +39,7 @@ export const useItemStore = defineStore("items", () => {
         motherboard: "MSI",
         price: "799.00",
         desciption: "",
-        category: "Computers",
+        category: "computers",
       },
       {
         id: "23",
@@ -51,7 +51,7 @@ export const useItemStore = defineStore("items", () => {
         motherboard: "MSI",
         price: "799.00",
         desciption: "",
-        category: "Computers",
+        category: "computers",
       },
       {
         id: "24",
@@ -63,7 +63,7 @@ export const useItemStore = defineStore("items", () => {
         motherboard: "MSI",
         price: "799.00",
         desciption: "",
-        category: "Computers",
+        category: "computers",
       },
       {
         id: "25",
@@ -75,7 +75,7 @@ export const useItemStore = defineStore("items", () => {
         motherboard: "MSI",
         price: "799.00",
         desciption: "",
-        category: "Computers",
+        category: "computers",
       },
       {
         id: "26",
@@ -87,7 +87,7 @@ export const useItemStore = defineStore("items", () => {
         motherboard: "MSI",
         price: "799.00",
         desciption: "",
-        category: "Computers",
+        category: "computers",
       },
       {
         id: "27",
@@ -99,7 +99,7 @@ export const useItemStore = defineStore("items", () => {
         motherboard: "MSI",
         price: "799.00",
         desciption: "",
-        category: "Computers",
+        category: "computers",
       },
       {
         id: "28",
@@ -111,7 +111,7 @@ export const useItemStore = defineStore("items", () => {
         motherboard: "MSI",
         price: "799.00",
         desciption: "",
-        category: "Computers",
+        category: "computers",
       },
     ],
     consoles: [
