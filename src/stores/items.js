@@ -13,7 +13,8 @@ export const useItemStore = defineStore("items", () => {
         ram: "16",
         motherboard: "MSI",
         price: "799.00",
-        desciption: "",
+        description:
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus eveniet minus corporis culpa explicabo laborum rem officia incidunt tempore, accusamus quo minima, enim dolorum, suscipit velit facilis perspiciatis est possimus harum vero aspernatur repellat consectetur! Quisquam alias eum excepturi tenetur!",
         category: "Computers",
       },
       {
