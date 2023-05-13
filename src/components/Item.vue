@@ -6,8 +6,8 @@
     <!-- parameters area -->
     <div class="w-[100%] flex flex-col place-items-center">
       <span class="">{{ name }}</span>
-      <span class="">CPU: {{ cpu }}</span>
-      <span class="">GPU: {{ gpu }}</span>
+      <span v-if="category === 'computers'" class="">CPU: {{ cpu }}</span>
+      <span v-if="category === 'computers'" class="">GPU: {{ gpu }}</span>
       <span class="">Price: {{ price }}</span>
       <div
         class="bg-violet-600 text-3xl rounded-md mt-4 p-2 text-white cursor-pointer"

@@ -116,22 +116,34 @@ export const useItemStore = defineStore("items", () => {
     ],
     consoles: [
       {
-        id: "",
-        name: "",
-        price: "",
+        id: "7567",
+        name: "Playstation 5",
+        image: "/images/ps5.webp",
+        description:
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus eveniet minus corporis culpa explicabo laborum rem officia incidunt tempore, accusamus quo minima, enim dolorum, suscipit velit facilis perspiciatis est possimus harum vero aspernatur repellat consectetur! Quisquam alias eum excepturi tenetur!",
+        price: "600.00",
         desciption: "",
+        category: "consoles",
       },
       {
-        id: "",
-        name: "",
-        price: "",
+        id: "452",
+        name: "Xbox Series X",
+        image: "/images/xbox.png",
+        description:
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus eveniet minus corporis culpa explicabo laborum rem officia incidunt tempore, accusamus quo minima, enim dolorum, suscipit velit facilis perspiciatis est possimus harum vero aspernatur repellat consectetur! Quisquam alias eum excepturi tenetur!",
+        price: "500.00",
         desciption: "",
+        category: "consoles",
       },
       {
-        id: "",
-        name: "",
-        price: "",
+        id: "89",
+        name: "Nintendo Switch Oled",
+        image: "/images/nintendo.webp",
+        description:
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus eveniet minus corporis culpa explicabo laborum rem officia incidunt tempore, accusamus quo minima, enim dolorum, suscipit velit facilis perspiciatis est possimus harum vero aspernatur repellat consectetur! Quisquam alias eum excepturi tenetur!",
+        price: "244.00",
         desciption: "",
+        category: "consoles",
       },
     ],
   };

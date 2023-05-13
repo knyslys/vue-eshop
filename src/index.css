@@ -3,6 +3,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .titlez {
+    @apply text-2xl mt-1 text-violet-500 uppercase;
+  }
+}
 *,
 *::after,
 *::before {

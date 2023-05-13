@@ -7,7 +7,7 @@
     <div
       class="bg-violet-100 fixed top-0 w-screen max-h-[85vh] left-1/2 -translate-x-2/4 z-30 overflow-y-scroll p-4"
     >
-      <div class="grid grid-cols-1">
+      <div class="grid grid-cols-1 md:grid-cols-2">
         <img :src="selectedItem.image" />
         <div class="item-desc flex flex-col gap-y-4 place-content-center">
           <h1 class="text-2xl mt-1 text-violet-500 uppercase text-center">
@@ -15,32 +15,32 @@
           </h1>
           <p>{{ selectedItem.description }}</p>
 
-          <div class="item-status flex flex-col">
+          <div class="item-status flex flex-col md:justify-start">
             <span
               >Price:
               <span class="font-bold text-violet-500"
                 >{{ selectedItem.price }} e
               </span>
             </span>
-            <span
+            <span v-if="prop.category === 'computers'"
               >GPU:
               <span class="font-bold text-violet-500">{{
                 selectedItem.gpu
               }}</span></span
             >
-            <span
+            <span v-if="prop.category === 'computers'"
               >CPU:
               <span class="font-bold text-violet-500">{{
                 selectedItem.cpu
               }}</span></span
             >
-            <span
+            <span v-if="prop.category === 'computers'"
               >RAM:
               <span class="font-bold text-violet-500"
                 >{{ selectedItem.ram }} GB
               </span></span
             >
-            <span
+            <span v-if="prop.category === 'computers'"
               >MOTHERBOARD:
               <span class="font-bold text-violet-500"
                 >{{ selectedItem.motherboard }}
@@ -56,7 +56,7 @@
             class="text-center rounded-md"
           />
           <button
-            class="hover:-translate-y-1 hover:shadow-md uppercase catalog bg-violet-950 text-white p-4 rounded-md duration-200 hover:p-5"
+            class="hover:-translate-y-1 hover:shadow-md uppercase catalog bg-violet-950 text-white p-4 rounded-md duration-200 hover:p-5 md:justify-start"
             @click="submitToCart"
           >
             add

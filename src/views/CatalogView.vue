@@ -23,13 +23,24 @@
         class="items grid gap-y-10 grid-cols-1 lg:grid-cols-2 lg:col-span-2 gap-x-10"
       >
         <item
-          v-for="pc in items[selectedCategory]"
+          v-for="pc in itemStore.items[selectedCategory]"
           :id="pc.id"
           :img="pc.image"
           :name="pc.name"
           :price="pc.price"
           :cpu="pc.cpu"
           :gpu="pc.gpu"
+          :category="selectedCategory"
+          v-if="selectedCategory === 'computers'"
+        ></item>
+        <item
+          v-for="pc in itemStore.items[selectedCategory]"
+          :id="pc.id"
+          :img="pc.image"
+          :name="pc.name"
+          :price="pc.price"
+          :category="selectedCategory"
+          v-else
         ></item>
       </div>
     </div>
@@ -47,141 +58,142 @@ import { ref, computed, onMounted } from "vue";
 import Item from "../components/Item.vue";
 import { useRoute } from "vue-router";
 import ItemView from "../components/ItemView.vue";
+import { useItemStore } from "../stores/items";
 const selectedCategory = ref("computers");
 const rtr = useRoute();
-
-const items = {
-  computers: [
-    {
-      id: "11",
-      name: "Galaxy Chad Super",
-      image: "/images/pc1.webp",
-      cpu: "AMD Ryzen 4-5000",
-      gpu: "NVIDIA RTX 3060TI",
-      ram: "16",
-      motherboard: "MSI",
-      price: "799.00",
-      desciption: "",
-      category: "Computers",
-    },
-    {
-      id: "12",
-      name: "Galaxy Chad Super",
-      image: "/images/pc1.webp",
-      cpu: "AMD Ryzen 4-5000",
-      gpu: "NVIDIA RTX 3060TI",
-      ram: "16",
-      motherboard: "MSI",
-      price: "799.00",
-      desciption: "",
-      category: "Computers",
-    },
-    {
-      id: "22",
-      name: "Galaxy Chad Super",
-      image: "/images/pc1.webp",
-      cpu: "AMD Ryzen 4-5000",
-      gpu: "NVIDIA RTX 3060TI",
-      ram: "16",
-      motherboard: "MSI",
-      price: "799.00",
-      desciption: "",
-      category: "Computers",
-    },
-    {
-      id: "23",
-      name: "Galaxy Chad Super",
-      image: "/images/pc1.webp",
-      cpu: "AMD Ryzen 4-5000",
-      gpu: "NVIDIA RTX 3060TI",
-      ram: "16",
-      motherboard: "MSI",
-      price: "799.00",
-      desciption: "",
-      category: "Computers",
-    },
-    {
-      id: "24",
-      name: "Galaxy Chad Super",
-      image: "/images/pc1.webp",
-      cpu: "AMD Ryzen 4-5000",
-      gpu: "NVIDIA RTX 3060TI",
-      ram: "16",
-      motherboard: "MSI",
-      price: "799.00",
-      desciption: "",
-      category: "Computers",
-    },
-    {
-      id: "25",
-      name: "Galaxy Chad Super",
-      image: "/images/pc1.webp",
-      cpu: "AMD Ryzen 4-5000",
-      gpu: "NVIDIA RTX 3060TI",
-      ram: "16",
-      motherboard: "MSI",
-      price: "799.00",
-      desciption: "",
-      category: "Computers",
-    },
-    {
-      id: "26",
-      name: "Galaxy Chad Super",
-      image: "/images/pc1.webp",
-      cpu: "AMD Ryzen 4-5000",
-      gpu: "NVIDIA RTX 3060TI",
-      ram: "16",
-      motherboard: "MSI",
-      price: "799.00",
-      desciption: "",
-      category: "Computers",
-    },
-    {
-      id: "27",
-      name: "Galaxy Chad Super",
-      image: "/images/pc1.webp",
-      cpu: "AMD Ryzen 4-5000",
-      gpu: "NVIDIA RTX 3060TI",
-      ram: "16",
-      motherboard: "MSI",
-      price: "799.00",
-      desciption: "",
-      category: "Computers",
-    },
-    {
-      id: "28",
-      name: "Galaxy Chad Super",
-      image: "/images/pc1.webp",
-      cpu: "AMD Ryzen 4-5000",
-      gpu: "NVIDIA RTX 3060TI",
-      ram: "16",
-      motherboard: "MSI",
-      price: "799.00",
-      desciption: "",
-      category: "Computers",
-    },
-  ],
-  consoles: [
-    {
-      id: "",
-      name: "",
-      price: "",
-      desciption: "",
-    },
-    {
-      id: "",
-      name: "",
-      price: "",
-      desciption: "",
-    },
-    {
-      id: "",
-      name: "",
-      price: "",
-      desciption: "",
-    },
-  ],
-};
+const itemStore = useItemStore();
+// const items = {
+//   computers: [
+//     {
+//       id: "11",
+//       name: "Galaxy Chad Super",
+//       image: "/images/pc1.webp",
+//       cpu: "AMD Ryzen 4-5000",
+//       gpu: "NVIDIA RTX 3060TI",
+//       ram: "16",
+//       motherboard: "MSI",
+//       price: "799.00",
+//       desciption: "",
+//       category: "Computers",
+//     },
+//     {
+//       id: "12",
+//       name: "Galaxy Chad Super",
+//       image: "/images/pc1.webp",
+//       cpu: "AMD Ryzen 4-5000",
+//       gpu: "NVIDIA RTX 3060TI",
+//       ram: "16",
+//       motherboard: "MSI",
+//       price: "799.00",
+//       desciption: "",
+//       category: "Computers",
+//     },
+//     {
+//       id: "22",
+//       name: "Galaxy Chad Super",
+//       image: "/images/pc1.webp",
+//       cpu: "AMD Ryzen 4-5000",
+//       gpu: "NVIDIA RTX 3060TI",
+//       ram: "16",
+//       motherboard: "MSI",
+//       price: "799.00",
+//       desciption: "",
+//       category: "Computers",
+//     },
+//     {
+//       id: "23",
+//       name: "Galaxy Chad Super",
+//       image: "/images/pc1.webp",
+//       cpu: "AMD Ryzen 4-5000",
+//       gpu: "NVIDIA RTX 3060TI",
+//       ram: "16",
+//       motherboard: "MSI",
+//       price: "799.00",
+//       desciption: "",
+//       category: "Computers",
+//     },
+//     {
+//       id: "24",
+//       name: "Galaxy Chad Super",
+//       image: "/images/pc1.webp",
+//       cpu: "AMD Ryzen 4-5000",
+//       gpu: "NVIDIA RTX 3060TI",
+//       ram: "16",
+//       motherboard: "MSI",
+//       price: "799.00",
+//       desciption: "",
+//       category: "Computers",
+//     },
+//     {
+//       id: "25",
+//       name: "Galaxy Chad Super",
+//       image: "/images/pc1.webp",
+//       cpu: "AMD Ryzen 4-5000",
+//       gpu: "NVIDIA RTX 3060TI",
+//       ram: "16",
+//       motherboard: "MSI",
+//       price: "799.00",
+//       desciption: "",
+//       category: "Computers",
+//     },
+//     {
+//       id: "26",
+//       name: "Galaxy Chad Super",
+//       image: "/images/pc1.webp",
+//       cpu: "AMD Ryzen 4-5000",
+//       gpu: "NVIDIA RTX 3060TI",
+//       ram: "16",
+//       motherboard: "MSI",
+//       price: "799.00",
+//       desciption: "",
+//       category: "Computers",
+//     },
+//     {
+//       id: "27",
+//       name: "Galaxy Chad Super",
+//       image: "/images/pc1.webp",
+//       cpu: "AMD Ryzen 4-5000",
+//       gpu: "NVIDIA RTX 3060TI",
+//       ram: "16",
+//       motherboard: "MSI",
+//       price: "799.00",
+//       desciption: "",
+//       category: "Computers",
+//     },
+//     {
+//       id: "28",
+//       name: "Galaxy Chad Super",
+//       image: "/images/pc1.webp",
+//       cpu: "AMD Ryzen 4-5000",
+//       gpu: "NVIDIA RTX 3060TI",
+//       ram: "16",
+//       motherboard: "MSI",
+//       price: "799.00",
+//       desciption: "",
+//       category: "Computers",
+//     },
+//   ],
+//   consoles: [
+//     {
+//       id: "",
+//       name: "",
+//       price: "",
+//       desciption: "",
+//     },
+//     {
+//       id: "",
+//       name: "",
+//       price: "",
+//       desciption: "",
+//     },
+//     {
+//       id: "",
+//       name: "",
+//       price: "",
+//       desciption: "",
+//     },
+//   ],
+// };
 </script>
 
 <style scoped>
