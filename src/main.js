@@ -5,6 +5,7 @@ import App from "./App.vue";
 import router from "./router";
 import VueKinesis from "vue-kinesis";
 import Navigation from "./components/Navigation.vue";
+
 const app = createApp(App);
 
 app.component("navigation", Navigation);

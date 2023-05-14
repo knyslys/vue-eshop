@@ -24,6 +24,7 @@
       >
         <item
           v-for="pc in itemStore.items[selectedCategory]"
+          :key="pc.id"
           :id="pc.id"
           :img="pc.image"
           :name="pc.name"
@@ -59,6 +60,7 @@ import Item from "../components/Item.vue";
 import { useRoute } from "vue-router";
 import ItemView from "../components/ItemView.vue";
 import { useItemStore } from "../stores/items";
+
 const selectedCategory = ref("computers");
 const rtr = useRoute();
 const itemStore = useItemStore();

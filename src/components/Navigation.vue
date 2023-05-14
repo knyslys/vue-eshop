@@ -12,16 +12,17 @@
         >
           Services <Icon icon="mdi:dots-grid" class="text-md" />
         </li>
-        <li><RouterLink to="#">About</RouterLink></li>
-        <li><RouterLink to="#">FAQ</RouterLink></li>
-        <li v-if="cart.howManyItems > 0" class="relative">
+        <li><RouterLink to="/about/">About</RouterLink></li>
+        <li><RouterLink to="/faq/">FAQ</RouterLink></li>
+        <li class="relative">
           <RouterLink to="/cart/">
             <Icon
               icon="material-symbols:shopping-cart-outline"
               class="text-lg"
             />
             <div
-              class="absolute -top-1/4 -right-6 rounded-lg p-1 bg-violet-950 text-white text-sm"
+              class="absolute top-1/3 -left-2 rounded-lg text-violet-900 text-xl"
+              v-if="cart.howManyItems > 0"
             >
               <span>
                 {{ cart.howManyItems }}

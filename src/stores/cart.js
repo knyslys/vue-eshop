@@ -1,8 +1,14 @@
 import { defineStore } from "pinia";
-import { computed, ref } from "vue";
+import { computed, onMounted, ref } from "vue";
 import { useItemStore } from "./items";
 export const useCart = defineStore("cart", () => {
   const cart = ref([]);
+
+  onMounted(() => {
+    if (localStorage.hasOwnProperty("cart")) {
+      cart.value = JSON.parse(localStorage.getItem("cart"));
+    }
+  });
   const itemStore = useItemStore();
   const addToCart = (id, category, quantity) => {
     const findItem = cart.value.findIndex((item) => item.id === id);
@@ -17,6 +23,7 @@ export const useCart = defineStore("cart", () => {
       whatItemToAdd.quantity = quantity;
       cart.value.push(whatItemToAdd);
     }
+    localStorage.setItem("cart", JSON.stringify(cart.value));
   };
 
   const howManyItems = computed(() => {
@@ -30,6 +37,7 @@ export const useCart = defineStore("cart", () => {
   const increaseQuantity = (id) => {
     const findItem = cart.value.findIndex((item) => item.id === id);
     cart.value[findItem].quantity++;
+    localStorage.setItem("cart", JSON.stringify(cart.value));
   };
 
   const decreaseQuantity = (id) => {
@@ -38,6 +46,7 @@ export const useCart = defineStore("cart", () => {
     if (cart.value[findItem].quantity === 0) {
       cart.value.splice(findItem, 1);
     }
+    localStorage.setItem("cart", JSON.stringify(cart.value));
   };
 
   const totalCost = computed(() => {

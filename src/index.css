@@ -19,7 +19,8 @@
 body {
   font-family: "Ubuntu", sans-serif;
 }
-
+html {
+}
 p {
   line-height: 1.6;
 }
