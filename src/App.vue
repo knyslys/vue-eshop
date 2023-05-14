@@ -19,11 +19,11 @@ import TheParts from "./components/TheParts.vue";
 
 <style scoped>
 .fade-in-enter-active {
-  animation: fadeInRight 0.9s;
+  animation: fadeIn 0.5s;
   animation-timing-function: cubic-bezier(0.94, -0.44, 0.14, 1.5);
 }
 .fade-in-leave-active {
-  animation: fadeOutLeft 0.9s;
+  animation: fadeOut 0.5s;
   animation-timing-function: cubic-bezier(0.94, -0.44, 0.14, 1.5);
 }
 </style>
