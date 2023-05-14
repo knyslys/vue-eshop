@@ -1,7 +1,7 @@
 <template>
   <nav class="p-4 bg-violet-100 relative">
     <div
-      class="container flex justify-between mx-auto flex-wrap place-items-center"
+      class="container flex justify-between mx-auto flex-wrap place-items-center gap-y-2"
     >
       <h1 class="text-2xl">JSComputers</h1>
       <ul class="flex gap-4 place-items-center">
@@ -49,4 +49,8 @@ const setShowServies = () => {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.router-link-active {
+  @apply text-violet-800;
+}
+</style>

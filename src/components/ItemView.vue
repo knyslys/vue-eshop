@@ -50,6 +50,9 @@
           <p class="text-red-500 text-center" v-if="error !== ''">
             {{ error }}
           </p>
+          <p class="text-green-500 text-center" v-if="added">
+            Item added to your cart!
+          </p>
           <input
             type="number"
             v-model="itemQuantity"
@@ -78,6 +81,7 @@ const router = useRouter();
 const selectedItem = ref({});
 const itemQuantity = ref(1);
 const error = ref("");
+const added = ref(false);
 onMounted(() => {
   const foundedItem = items.itemExist(prop.category, prop.id);
   if (!foundedItem) {
@@ -94,7 +98,7 @@ const prop = defineProps({
     type: String,
   },
 });
-
+let addedTimeout;
 const submitToCart = () => {
   if (itemQuantity.value <= 0) {
     error.value = "Please enter a valid quantity!";
@@ -105,7 +109,12 @@ const submitToCart = () => {
     selectedItem.value.category,
     itemQuantity.value
   );
+  clearTimeout(addedTimeout);
   error.value = "";
+  added.value = true;
+  addedTimeout = setTimeout(() => {
+    added.value = false;
+  }, 2000);
 };
 </script>
 

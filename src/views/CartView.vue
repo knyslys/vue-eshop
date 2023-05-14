@@ -1,6 +1,6 @@
 <template>
-  <div class="container mx-auto p-2">
-    <ul class="flex flex-col gap-y-4">
+  <div class="container mx-auto p-4">
+    <ul class="flex flex-col gap-y-4" v-if="cartStore.cart.length > 0">
       <li
         v-for="item in cartStore.cart"
         class="flex flex-col place-items-center bg-violet-50 rounded-md shadow-md p-2 md:flex-row md:justify-between"
@@ -31,6 +31,15 @@
         </h1>
       </div>
     </ul>
+    <div v-else class="flex flex-col gap-y-5 place-items-center">
+      <p>Your Cart is empty</p>
+      <RouterLink
+        to="/catalog"
+        class="hover:-translate-y-1 hover:shadow-md uppercase catalog bg-violet-950 text-white p-4 rounded-md duration-200 hover:p-5"
+      >
+        Check our Catalog
+      </RouterLink>
+    </div>
   </div>
 </template>
 

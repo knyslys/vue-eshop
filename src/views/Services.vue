@@ -2,9 +2,11 @@
   <div class="services bg-violet-100" v-if="props.show">
     <div class="services-info bg-violet-100">
       <div
-        class="container mx-auto flex justify-between place-items-center pt-4 pb-4"
+        class="container mx-auto flex flex-col md:flex-row md:place-items-center md:justify-between pt-4 pb-4 gap-y-4"
       >
-        <div class="flex place-items-center">
+        <div
+          class="flex flex-col md:flex-row place-items-center justify-center md:justify-start"
+        >
           <img
             src="/images/customer-service.png"
             alt="Our services"
@@ -12,7 +14,9 @@
           />
           <h1 class="text-2xl mt-1 text-violet-500 uppercase">Our services</h1>
         </div>
-        <div class="grid grid-cols-2 gap-4">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center md:justify-items-start"
+        >
           <h1 class="text-xl flex place-items-center gap-1">
             <Icon icon="fluent-mdl2:repair" /><span>Repairing</span>
           </h1>

@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-violet-50 p-14">
+  <header class="bg-violet-50 p-4 md:p-14">
     <div
       class="container test mx-auto bg-violet-50 border-solid border-2 rounded-lg shadow-lg"
     >
