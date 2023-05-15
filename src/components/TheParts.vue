@@ -1,5 +1,5 @@
 <template>
-  <section class="section-parts shadow-lg">
+  <section class="section-parts shadow-lg overflow-x-hidden">
     <div class="container mx-auto p-14 flex flex-col text-center">
       <h1 class="text-4xl text-violet-600 uppercase font-bold">
         Only the best manifacturers
