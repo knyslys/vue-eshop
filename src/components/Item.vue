@@ -52,4 +52,8 @@ const props = defineProps({
 const { id, name, cpu, gpu, price, category, motherboard, img } = props;
 </script>
 
-<style scoped></style>
+<style scoped>
+img {
+  aspect-ratio: 16/15;
+}
+</style>

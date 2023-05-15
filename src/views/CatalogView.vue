@@ -1,5 +1,5 @@
 <template>
-  <section class="section-catalog">
+  <section class="section-catalog p-4">
     <div class="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-x-2">
       <div class="categories pt-2 pb-2">
         <ul>

@@ -8,7 +8,7 @@
       class="bg-violet-100 fixed top-0 w-screen max-h-[85vh] left-1/2 -translate-x-2/4 z-30 overflow-y-scroll p-4"
     >
       <div class="grid grid-cols-1 md:grid-cols-2">
-        <img :src="selectedItem.image" />
+        <img :src="selectedItem.image" class="md:max-w-xl" />
         <div class="item-desc flex flex-col gap-y-4 place-content-center">
           <h1 class="text-2xl mt-1 text-violet-500 uppercase text-center">
             {{ selectedItem.name }}

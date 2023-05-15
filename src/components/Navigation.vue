@@ -53,4 +53,9 @@ const setShowServies = () => {
 .router-link-active {
   @apply text-violet-800;
 }
+
+a:hover {
+  transition: 0.6s all linear;
+  @apply text-violet-500;
+}
 </style>

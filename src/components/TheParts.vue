@@ -9,21 +9,30 @@
       >
         <img
           class="partner md:max-w-[10%]"
-          src="/images/intel.png"
+          src="/images/intel.webp"
           alt="intel"
         />
-        <img class="partner md:max-w-[10%]" src="/images/amd.png" alt="intel" />
         <img
           class="partner md:max-w-[10%]"
-          src="/images/nvidia.png"
+          src="/images/amd.webp"
           alt="intel"
         />
-        <img class="partner md:max-w-[10%]" src="/images/msi.png" alt="intel" />
+        <img
+          class="partner md:max-w-[10%]"
+          src="/images/nvidia.webp"
+          alt="intel"
+        />
+        <img
+          class="partner md:max-w-[10%]"
+          src="/images/msi.webp"
+          alt="intel"
+        />
       </div>
       <kinesis-container class="pc-circle mx-auto mt-10">
         <kinesis-element
           tag="img"
           src="/images/pc1.webp"
+          alt="Computer"
           :strength="-7"
           type="rotate"
           transformOrigin="50% 300%"
@@ -32,7 +41,8 @@
         />
         <kinesis-element
           tag="img"
-          src="/images/pc1.webp"
+          src="/images/pc5.webp"
+          alt="Computer"
           :strength="7"
           type="rotate"
           transformOrigin="50% 300%"
@@ -41,7 +51,8 @@
         />
         <kinesis-element
           tag="img"
-          src="/images/pc3.webp"
+          src="/images/pc7.webp"
+          alt="Computer"
           :strength="14"
           type="rotate"
           transformOrigin="50% 300%"
@@ -50,7 +61,8 @@
         />
         <kinesis-element
           tag="img"
-          src="/images/pc5.webp"
+          src="/images/pc10.webp"
+          alt="Computer"
           :strength="-14"
           type="rotate"
           transformOrigin="50% 300%"
@@ -60,6 +72,7 @@
         <kinesis-element
           tag="img"
           src="/images/pc3.webp"
+          alt="Computer"
           :strength="7"
           type="depth"
           transformOrigin="50% 300%"

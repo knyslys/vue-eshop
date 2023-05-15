@@ -58,21 +58,21 @@ import { Icon } from "@iconify/vue";
 import { RouterLink } from "vue-router";
 const headerContent = [
   {
-    image: "/images/pc-game.png",
+    image: "/images/pc-game.webp",
 
     title: "Best Prebuilt computers",
     subtitle: "With the best price!",
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus eveniet minus corporis culpa explicabo laborum rem officia incidunt tempore, accusamus quo minima, enim dolorum, suscipit velit facilis perspiciatis est possimus harum vero aspernatur repellat consectetur! Quisquam alias eum excepturi tenetur!",
   },
   {
-    image: "/images/seo.png",
+    image: "/images/seo.webp",
 
     title: "Best experts in the industry",
     subtitle: "With a best attitude!",
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus eveniet minus corporis culpa explicabo laborum rem officia incidunt tempore, accusamus quo minima, enim dolorum, suscipit velit facilis perspiciatis est possimus harum vero aspernatur repellat consectetur! Quisquam alias eum excepturi tenetur!",
   },
   {
-    image: "/images/programmer.png",
+    image: "/images/programmer.webp",
 
     title: "Best of the best",
     subtitle: "Because we love what we do!",

@@ -8,13 +8,14 @@ import TheParts from "./components/TheParts.vue";
 
 <template>
   <navigation></navigation>
-  <main class="overflow-y-hidden">
+  <main class="overflow-y-hidden flex flex-col min-h-screen">
     <RouterView v-slot="{ Component }">
       <Transition name="fade-in" mode="out-in">
         <component :is="Component"></component>
       </Transition>
     </RouterView>
   </main>
+  <the-footer></the-footer>
 </template>
 
 <style scoped>
